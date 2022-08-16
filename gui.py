@@ -51,30 +51,30 @@ class NewGameGUI:
 
         self.header_box = arcade.gui.UIBoxLayout()
 
-        text_label = arcade.gui.UITextArea(text="Add your Players!", font_size=24)
-        self.header_box.add(text_label)
+        text_label = arcade.gui.UILabel(text="Add your Players!", font_size=24)
+        self.header_box.add(text_label.with_space_around(bottom=20))
 
         self.form_box = arcade.gui.UIBoxLayout()
 
         name_label = arcade.gui.UILabel(text="Enter Player name", font_size=12, align="center")
         self.form_box.add(name_label.with_space_around(bottom=10))
 
-        name_area = arcade.gui.UIInputText(height=20, width=200)
-        self.form_box.add(name_area.with_border(2, arcade.color.BLACK).with_space_around(bottom=20))
+        self.name_area = arcade.gui.UIInputText(height=20, width=200)
+        self.form_box.add(self.name_area.with_border(2, arcade.color.BLACK).with_space_around(bottom=20))
 
         nickname_label = arcade.gui.UILabel(text="Enter Player's Display Name", font_size=12, align="center")
         self.form_box.add(nickname_label.with_space_around(bottom=10))
 
-        nickname_area = arcade.gui.UIInputText(height=20, width=200)
-        self.form_box.add(nickname_area.with_border(2, arcade.color.BLACK).with_space_around(bottom=20))
+        self.nickname_area = arcade.gui.UIInputText(height=20, width=200)
+        self.form_box.add(self.nickname_area.with_border(2, arcade.color.BLACK).with_space_around(bottom=20))
 
         self.button_box = arcade.gui.UIBoxLayout(vertical=False)
 
-        add_user_button = arcade.gui.UIFlatButton(text="Add User")
-        self.button_box.add(add_user_button.with_space_around(right=20))
+        self.add_user_button = arcade.gui.UIFlatButton(text="Add User")
+        self.button_box.add(self.add_user_button.with_space_around(right=20))
 
-        play_game_button = arcade.gui.UIFlatButton(text="Play Game")
-        self.button_box.add(play_game_button.with_space_around(right=20))
+        self.play_game_button = arcade.gui.UIFlatButton(text="Play Game")
+        self.button_box.add(self.play_game_button.with_space_around(right=20))
 
         self.manager.add(
             arcade.gui.UIAnchorWidget(
