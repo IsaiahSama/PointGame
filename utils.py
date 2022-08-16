@@ -12,7 +12,7 @@ PLAYER_NAME:
 
 default_save_state = {}
 
-save_file_name = ""
+save_file_name = "players.yaml"
 class SaveStateManager:
     """Class which contains static methods used to manage the save state of the game"""
 
