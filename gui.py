@@ -21,7 +21,7 @@ class MenuGUI:
             self.v_box.add(load_game_button.with_space_around(bottom=20))
 
             load_game_button.on_click = self.load_game
-            
+
         new_game_button.on_click = self.new_game
         
 
@@ -33,9 +33,10 @@ class MenuGUI:
             )
         )
 
-    def new_game(self):
+    def new_game(self, event):
         """Will start a new game"""
-
-    def load_game(self):
+        pass
+    
+    def load_game(self, event):
         """Used to load the game"""
         pass
